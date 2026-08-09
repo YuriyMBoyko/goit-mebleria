@@ -22,6 +22,11 @@ html {
   display: none;
 }
 
+.header-nav-logo-icon {
+  width: 163px;
+  height: 70px;
+}
+
 .header-order-button {
   display: none;
 }
