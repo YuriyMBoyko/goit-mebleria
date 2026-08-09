@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Меблерія</title>
     <script type="module" crossorigin src="/goit-mebleria/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-mebleria/assets/index-B9i697N-.css">
+    <link rel="stylesheet" crossorigin href="/goit-mebleria/assets/index-CzizZZWc.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
     <div class="header-container">
       <nav class="header-nav">
-        <a class="header-nav-logo" href="#" aria-label="Mebleria">
+        <a class="header-nav-logo nav-link" href="#" aria-label="Mebleria">
           <svg class="header-nav-logo-icon" width="163" height="70" aria-label="Логотип Меблерія">
             <use href="/goit-mebleria/assets/logo-BDzWhQyQ.svg#logo-light"></use>
           </svg>
@@ -32,10 +32,10 @@
             <a class="header-nav-link nav-link" href="#feedback">Відгуки</a>
           </li>
         </ul>
-        <a href="#furniture-list" class="header-order-btn btn-primary">До покупок</a>
-        <button class="header-mobil-menu">
-          <svg width="32" height="32">
-            <use href="/goit-mebleria/assets/icons-DUIX29CU.svg#icon-menu"></use>
+        <a href="#furniture-list" class="header-order-button button-primary-small">До покупок</a>
+        <button class="header-mobile-menu-button">
+          <svg class="header-mobile-menu-icon nav-link" width="32" height="32">
+            <use href="/goit-mebleria/assets/icons-DUIX29CU.svg#menu"></use>
           </svg>
         </button>
       </nav>
@@ -107,33 +107,40 @@
     <div class="mobile-menu-overlay">
   <div class="mobile-menu">
     <div class="mobile-menu-container">
-      <button class="mobile-menu-close-button" type="button" data-mobile-menu-close>
-        <svg class="mobile-menu-close-button-svg" width="32" height="32">
-          <use href="/goit-mebleria/assets/icons-DUIX29CU.svg#close"></use>
-        </svg>
-      </button>
-      <nav class="mobile-menu-nav">
-        <a class="mobile-menu-nav-logo" href="#" aria-label="Mebleria">
-          <svg class="mobile-menu-nav-logo-icon" width="163" height="70">
-            <use href="/goit-mebleria/assets/logo-BDzWhQyQ.svg"></use>
-          </svg>
-        </a>
-        <ul class="mobile-menu-nav-list nav-list">
-          <li class="mobile-menu-nav-item">
-            <a class="mobile-menu-nav-link" href="#furniture">Наші меблі</a>
-          </li>
-          <li class="mobile-menu-nav-item">
-            <a class="mobile-menu-nav-link" href="#about">Про нас</a>
-          </li>
-          <li class="mobile-menu-nav-item">
-            <a class="mobile-menu-nav-link" href="#faq">Часті питання</a>
-          </li>
-          <li class="mobile-menu-nav-item">
-            <a class="mobile-menu-nav-link" href="#feedback">Відгуки</a>
-          </li>
-        </ul>
-        <a href="#furniture-list" class="mobile-order-btn btn-primary mobile-btn">До покупок</a>
-      </nav>
+      <div class="mobile-menu-header-wrapper">
+        <div class="mobile-menu-header">
+          <a class="mobile-menu-logo nav-link" href="#" aria-label="Mebleria">
+            <svg class="mobile-menu-logo-icon" width="163" height="70">
+              <use href="/goit-mebleria/assets/logo-BDzWhQyQ.svg#logo-light"></use>
+            </svg>
+          </a>
+          <button class="mobile-menu-close-button nav-link" type="button" data-mobile-menu-close>
+            <svg class="mobile-menu-close-button-icon" width="32" height="32">
+              <use href="/goit-mebleria/assets/icons-DUIX29CU.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu-nav-wrapper">
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-nav-list nav-list">
+            <li class="mobile-menu-nav-item">
+              <a class="mobile-menu-nav-link nav-link" href="#furniture">Наші меблі</a>
+            </li>
+            <li class="mobile-menu-nav-item">
+              <a class="mobile-menu-nav-link nav-link" href="#about">Про нас</a>
+            </li>
+            <li class="mobile-menu-nav-item">
+              <a class="mobile-menu-nav-link nav-link" href="#faq">Часті питання</a>
+            </li>
+            <li class="mobile-menu-nav-item">
+              <a class="mobile-menu-nav-link nav-link" href="#feedback">Відгуки</a>
+            </li>
+          </ul>
+          <a href="#furniture-list" class="mobile-order-button button-primary-small">До покупок</a>
+        </nav>
+        <div class="mobile-menu-nav-filler"></div>
+      </div>
     </div>
   </div>
 </div>
