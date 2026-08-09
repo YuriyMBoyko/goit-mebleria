@@ -43,7 +43,7 @@
 	--color-scheme-2-foreground: var(--color-madang-lighter);
 
   --color-text: var(--color-scheme-1-text);
-  --color-background-color: var(--color-scheme-1-background);
+  --color-background: var(--color-scheme-1-background);
   --color-border: var(--color-scheme-1-border);
   --color-accent: var(--color-scheme-1-accent);
   --color-foreground: var(--color-scheme-1-foreground);
@@ -71,6 +71,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+	font-family: var(--font-family);
 }
 
 main {
