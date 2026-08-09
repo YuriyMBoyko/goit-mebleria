@@ -1,5 +1,6 @@
 :root {
 	--color-white: #fff;
+	--color-black: #000;
 	--color-neutral-lightest: #f2f2f2;
 	--color-neutral-lighter: #d9dada;
 	--color-neutral-light: #b4b6b5;
@@ -23,6 +24,8 @@
 	--opacity-white-40: rgba(255, 255, 255, 0.4);
 	--opacity-white-50: rgba(255, 255, 255, 0.5);
 	--opacity-white-60: rgba(255, 255, 255, 0.6);
+	--opacity-black-50: rgba(0, 0, 0, 0.5);
+	--opacity-black-60: rgba(0, 0, 0, 0.6);
 	--opacity-neutral-darkest-5: rgba(8, 12, 9, 0.05);
 	--opacity-neutral-darkest-10: rgba(8, 12, 9, 0.1);
 	--opacity-neutral-darkest-15: rgba(8, 12, 9, 0.15);

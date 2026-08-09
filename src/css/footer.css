@@ -1,5 +1,5 @@
 .footer {
-  padding: 0;
+  padding: 0 0 32px;
   color: var(--color-scheme-1-background);
   background-color: var(--color-madang);
 }
@@ -10,7 +10,6 @@
   justify-content: flex-start;
   align-items: center;
   gap: 24px;
-  padding: 0 20px 32px;
 }
 
 .footer-logo-icon {
@@ -67,22 +66,21 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .footer-container {
-    padding: 0 32px 32px;
-  }
-
   .footer-nav-list {
     flex-direction: row;
   }
 }
 
 @media only screen and (min-width: 1440px) {
+  .footer {
+    padding: 0;
+  }
+
   .footer-container {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 80px;
-    padding: 0;
   }
 
   .footer-credits {
