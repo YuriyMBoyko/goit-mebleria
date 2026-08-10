@@ -1,0 +1,129 @@
+.faq {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.faq-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+
+.faq-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+  width: 100%;
+  text-align: center;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+}
+
+.faq-question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  border-top: 1px solid var(--color-scheme-1-border);
+  padding: 20px 0px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--color-scheme-1-text);
+}
+
+.faq-question-arrow {
+  display: block;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0px 0px 24px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-scheme-1-text);
+}
+
+.faq-question-arrow-down {
+  display: block;
+}
+
+.faq-question-arrow-up {
+  display: none;
+}
+
+.faq-item.is-open .faq-answer {
+  display: block;
+}
+
+.faq-item.is-open .faq-question-arrow-down {
+  display: none;
+}
+
+.faq-item.is-open .faq-question-arrow-up {
+  display: block;
+}
+/*
+.faq-answer.is-open {
+  display: block;
+}
+*/
+@media only screen and (min-width: 768px) {
+  .faq-question {
+    padding: 21.5px 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .faq {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .faq-list {
+    max-width: 865px;
+  }
+
+  .faq-title {
+    font-size: 36px;
+  }
+}
