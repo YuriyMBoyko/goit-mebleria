@@ -66,6 +66,13 @@
   padding-bottom: 12.9px;
 }
 
+.feedback-star-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .feedback-star {
   width: 24px;
   height: 24px;
