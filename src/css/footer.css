@@ -1,8 +1,5 @@
 .footer {
-  position: sticky;
-  bottom: 0;
   z-index: 999;
-/*  padding: 0 0 32px;*/
   color: var(--color-scheme-1-background);
   background-color: var(--color-madang);
 }
@@ -83,6 +80,8 @@
 
 @media only screen and (min-width: 1440px) {
   .footer {
+    position: sticky;
+    bottom: 0;
     padding: 0;
   }
 
