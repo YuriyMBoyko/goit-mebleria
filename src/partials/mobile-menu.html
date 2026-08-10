@@ -1,15 +1,15 @@
-<div class="mobile-menu-overlay">
+<div class="mobile-menu-overlay" data-mobile-menu>
   <div class="mobile-menu">
-    <div class="mobile-menu-container">
+    <div class="container mobile-menu-container">
       <div class="mobile-menu-header-wrapper">
         <div class="mobile-menu-header">
-          <a class="mobile-menu-logo nav-link" href="#" aria-label="Mebleria">
-            <svg class="mobile-menu-logo-icon" width="163" height="70">
-              <use href="./img/logo.svg#logo-light"></use>
+          <a class="mobile-menu-logo nav-link" href="#" aria-label="Mebleria" data-mobile-menu-close>
+            <svg class="mobile-menu-logo-icon">
+              <use href="./img/logo.svg#logo"></use>
             </svg>
           </a>
           <button class="mobile-menu-close-button nav-link" type="button" data-mobile-menu-close>
-            <svg class="mobile-menu-close-button-icon" width="32" height="32">
+            <svg class="mobile-menu-close-button-icon">
               <use href="./img/icons.svg#close"></use>
             </svg>
           </button>
@@ -19,19 +19,19 @@
         <nav class="mobile-menu-nav">
           <ul class="mobile-menu-nav-list nav-list">
             <li class="mobile-menu-nav-item">
-              <a class="mobile-menu-nav-link nav-link" href="#furniture">Наші меблі</a>
+              <a class="mobile-menu-nav-link nav-link" href="#furniture" data-mobile-menu-close>Наші меблі</a>
             </li>
             <li class="mobile-menu-nav-item">
-              <a class="mobile-menu-nav-link nav-link" href="#about">Про нас</a>
+              <a class="mobile-menu-nav-link nav-link" href="#about" data-mobile-menu-close>Про нас</a>
             </li>
             <li class="mobile-menu-nav-item">
-              <a class="mobile-menu-nav-link nav-link" href="#faq">Часті питання</a>
+              <a class="mobile-menu-nav-link nav-link" href="#faq" data-mobile-menu-close>Часті питання</a>
             </li>
             <li class="mobile-menu-nav-item">
-              <a class="mobile-menu-nav-link nav-link" href="#feedback">Відгуки</a>
+              <a class="mobile-menu-nav-link nav-link" href="#feedback" data-mobile-menu-close>Відгуки</a>
             </li>
           </ul>
-          <a href="#furniture-list" class="mobile-order-button button-primary-small">До покупок</a>
+          <a href="#furniture-list" class="mobile-order-button button-primary-small" data-mobile-menu-close>До покупок</a>
         </nav>
         <div class="mobile-menu-nav-filler"></div>
       </div>

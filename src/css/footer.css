@@ -1,5 +1,8 @@
 .footer {
-  padding: 0 0 32px;
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+/*  padding: 0 0 32px;*/
   color: var(--color-scheme-1-background);
   background-color: var(--color-madang);
 }
@@ -13,8 +16,8 @@
 }
 
 .footer-logo-icon {
-  width: 229px;
-  height: 98px;
+  width: 228.5px;
+  max-height: 97.93px;
 }
 
 .footer-nav-list {
@@ -40,6 +43,13 @@
   align-items: center;
   gap: 24px;
   max-width: 120px;
+}
+
+.footer-social-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-social-icon {
