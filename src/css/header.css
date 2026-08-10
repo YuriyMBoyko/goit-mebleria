@@ -7,8 +7,9 @@ html {
   top: 0;
   width: 100vw;
   height: 72px;
-  z-index: 100;
+  z-index: 9999;
   padding: 0 20px;
+  background-color: var(--color-scheme-1-background);
 }
 
 .header-nav {
