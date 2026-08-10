@@ -60,3 +60,110 @@
 .button-primary-small:disabled {
   opacity: 0.2;
 }
+
+.button-secondary,
+.button-secondary-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  border-radius: 100px;
+  box-shadow: 0 1px 2px 0 var(--opacity-neutral-darkest-5), inset 0 -2px 1px 0 var(--opacity-neutral-darkest-5), inset 0 0 0 1px var(--opacity-neutral-darkest-5);
+  background-color: var(--opacity-neutral-darkest-5);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-neutral-darkest);
+  transition:
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-secondary-small {
+  padding: 8px 20px;
+}
+
+.button-secondary:active,
+.button-secondary-small:active {
+  box-shadow: none;
+}
+
+.button-secondary:hover,
+.button-secondary:focus,
+.button-secondary-small:hover,
+.button-secondary-small:focus {
+  opacity: 0.5;
+}
+
+.button-secondary:disabled,
+.button-secondary-small:disabled {
+  opacity: 0.2;
+}
+
+.slider-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  border-radius: 100px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background-color: var(--color-scheme-1-foreground);
+/*
+  background-image: url('../img/arrows.svg');
+  background-repeat: no-repeat;
+*/
+/*  background-position: center;*/
+  fill: var(--color-scheme-1-text);
+}
+
+.slider-arrow:hover,
+.slider-arrow:focus {
+  background-color: var(--color-madang-light);
+  fill: var(--color-scheme-1-background);
+}
+
+.slider-arrow:active {
+  background-color: var(--color-madang);
+  fill: var(--color-scheme-1-background);
+}
+
+.slider-arrow:disabled {
+  background: var(--color-scheme-1-foreground);
+  opacity: 0.3;
+  fill: var(--color-scheme-1-text);
+}
+/*
+.slider-arrow.is-left {
+  background-position: 0 center;
+}
+
+.slider-arrow.is-right {
+  background-position: -24px center;
+}
+
+.slider-arrow.is-top {
+  background-position: -48px center;
+}
+
+.slider-arrow.is-bottom {
+  background-position: -72px center;
+}
+*/
+/*
+.slider-arrow-left {
+  background-image: url(../img/icons.svg#left-arrow-alt);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+.slider-arrow-right {
+  background-image: url(../img/icons.svg#right-arrow-alt);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+*/
