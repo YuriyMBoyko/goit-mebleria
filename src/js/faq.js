@@ -25,13 +25,20 @@ const faqData = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+  const ac_container = document.querySelector('.accordion-container');
+
+  if (!ac_container) return;
+
+  const spriteUrl = new URL('../img/icons.svg', import.meta.url).href;
+  const iconId = 'chevron-down';
+
   const markup = faqData.map(({ question, answer }) => `
     <div class="ac">
       <h3 class="ac-header">
         <button class="ac-trigger" type="button">
           <span>${question}</span>
           <svg class="faq-question-arrow">
-            <use href="./img/icons.svg#chevron-down"></use>
+            <use href="${spriteUrl}#${iconId}"></use>
           </svg>
         </button>
       </h3>
@@ -42,19 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
     `
   ).join('');
 
-  const ac_container = document.querySelector('.accordion-container');
+  ac_container.innerHTML = markup;
 
-  if (ac_container) {
-    ac_container.innerHTML = markup;
-
-    new Accordion('.accordion-container', {
-      duration: 400,
-      showMultiple: false,
-      onOpen: function (element) {
-        console.log(element);
-      }
-    });
-  }
+  new Accordion('.accordion-container', {
+    duration: 400,
+    showMultiple: false,
+    onOpen: function (element) {
+      console.log(element);
+    }
+  });
 });
 
 /* Second method
