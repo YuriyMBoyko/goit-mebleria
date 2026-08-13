@@ -12,6 +12,10 @@
   gap: 24px;
 }
 
+.footer-logo-link {
+  color: var(--color-scheme-1-background);
+}
+
 .footer-logo-icon {
   width: 228.5px;
   max-height: 97.93px;
@@ -26,10 +30,6 @@
 }
 
 .footer-nav-link {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
   color: var(--color-scheme-1-background);
 }
 

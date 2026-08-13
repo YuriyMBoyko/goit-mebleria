@@ -57,7 +57,7 @@ html {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 160%;
     display: flex;
     justify-content: flex-start;
     gap: 32px;
