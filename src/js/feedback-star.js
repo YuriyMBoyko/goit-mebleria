@@ -1,18 +1,21 @@
-/*
-export function buildStarRatingMarkup(rate) {
-  return '';
-}
-*/
-export function buildStarRatingMarkup(rate) {
+export function buildStarRatingMarkup(selectorOrElement, rate) {
+
   const { rateIntValue, rateIsHalf } = rateNormalize(rate);
   const halfClass = rateIsHalf ? 'half' : '';
 
-  const starsMarkup = Array.from({ length: 5 }, getStarMarkup).join('');
+/*  const starMarkup = getStarMarkup();*/
+  const starMarkup = getStarMarkupByTemplate(selectorOrElement);
+
+  const starsMarkup = Array.from({ length: 5 }, () => { return starMarkup; }).join('');
 
   return `
     <div class="rating star-svg value-${rateIntValue} ${halfClass} color-default feedback-star-wrapper">
       <div class="star-container">${starsMarkup}</div>
     </div>`;
+}
+
+export function buildStarRatingEmptyMarkup(rate) {
+  return '';
 }
 
 function getStarMarkup() {
@@ -24,6 +27,21 @@ function getStarMarkup() {
       <svg class="star-half"><use href="${spriteUrl}#star-half"></use></svg>
       <svg class="star-filled"><use href="${spriteUrl}#star-filled"></use></svg>
     </div>`;
+}
+
+function getStarMarkupByTemplate(selectorOrElement) {
+  console.log(selectorOrElement)
+  if (!selectorOrElement) return '';
+
+  const isString = (typeof selectorOrElement === 'string');
+  
+  const template = isString ? document.querySelector(selectorOrElement) : selectorOrElement;
+  console.log(template);
+
+  if (template) {
+    console.log(template.contentDocument);
+    return template.innerHtml;
+  }
 }
 
 function rateNormalize(value) {
