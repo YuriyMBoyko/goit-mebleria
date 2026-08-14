@@ -3,58 +3,16 @@ import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import feedbackData, { feedbackEmptyData } from './feedback-data.js';
+import 'css-star-rating/css/star-rating.css';
 import { setElementVisible } from './helper.js';
+import { buildStarRatingMarkup } from './feedback-star.js'
+import feedbackData, { feedbackEmptyData } from './feedback-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-//  markupFeedbackData('.feedback-data-container', feedbackData.feedbacks);
-  markupFeedbackData('.feedback-data-container', feedbackEmptyData.feedbacks);
+  markupFeedbackData('.feedback-data-container', feedbackData.feedbacks);
+//  markupFeedbackData('.feedback-data-container', feedbackEmptyData.feedbacks);
   initSwiper();
   updateVisible();
-/*
-  const feedback_container = document.querySelector('.feedback-data-container');
-
-  if (!feedback_container) return;
-
-  const spriteUrl = new URL('../img/icons.svg', import.meta.url).href;
-  const iconId = 'star';
-
-  const url = `${spriteUrl}#${iconId}`;
-
-  const markup = feedbackData.feedbacks.map(({ _id, name, date, descr, rate }) => `
-    <li class="feedback-item" data_id="${_id}">
-  <!--          
-      <div class="feedback-rating rating value-3">
-        <div class="start-container"></div>
-      </div>
-    -->
-      <div class="feedback-rating" data-date="${date}" data-rate="${rate}">
-        <div class="feedback-star-wrapper">
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star">
-            <use href="${url}"></use>
-          </svg>
-        </div>
-      </div>
-      <p class="feedback-text">${descr}</p>
-      <p class="feedback-author">${name}</p>
-    </li>
-    `
-  ).join('');
-
-  feedback_container.innerHTML = markup;
-*/
 });
 
 function markupFeedbackData(selectorOrElement, data) {
@@ -72,37 +30,14 @@ function markupFeedbackData(selectorOrElement, data) {
 
   const url = `${spriteUrl}#${iconId}`;
 
-  const markup = data.map(({ _id, name, date, descr, rate }) => `
-    <li class="feedback-item swiper-slide" data_id="${_id}">
-  <!--          
-      <div class="feedback-rating rating value-3">
-        <div class="start-container"></div>
-      </div>
-    -->
-      <div class="feedback-rating" data-date="${date}" data-rate="${rate}">
-        <div class="feedback-star-wrapper">
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star is-marked">
-            <use href="${url}"></use>
-          </svg>
-          <svg class="feedback-star">
-            <use href="${url}"></use>
-          </svg>
-        </div>
-      </div>
-      <p class="feedback-text">${descr}</p>
-      <p class="feedback-author">${name}</p>
-    </li>
-    `
-  ).join('');
+  const markup = data.map(({ _id, name, date, descr, rate }) => {
+    return `
+      <li class="swiper-slide feedback-item" data_id="${_id}">
+        <div class="feedback-rating" data-date="${date}" data-rate="${rate}">${buildStarRatingMarkup(rate)}</div>
+        <p class="feedback-text">${descr}</p>
+        <p class="feedback-author">${name}</p>
+      </li>`;
+  }).join('');
 
   feedback_container.innerHTML = markup;
 }
