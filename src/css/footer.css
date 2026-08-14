@@ -72,13 +72,13 @@
   display: inline;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer-nav-list {
     flex-direction: row;
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .footer {
     position: sticky;
     bottom: 0;

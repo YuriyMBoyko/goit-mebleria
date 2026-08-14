@@ -4,26 +4,22 @@
       <h2 class="feedback-title">Відгуки клієнтів</h2>
       <p class="feedback-title-text">Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі.</p>
     </div>
-    <div class="feedback-wrapper">
-      <ul class="feedback-list feedback-data-container"></ul>
-      <div class="wiper-controls-wrapper">
-        <div class="wiper-controls">This is just a text</div>
-        <ul class="feedback-navigation-list">
-          <li class="feedback-navigation-item">
-            <button class="feedback-navigation-button slider-arrow" type="button">
-              <svg class="feedback-navigation-button-icon" width="24" height="24">
-                <use href="./img/icons.svg#left-arrow-alt"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="feedback-navigation-item">
-            <button class="feedback-navigation-button slider-arrow" type="button" disabled>
-              <svg class="feedback-navigation-button-icon" width="24" height="24">
-                <use href="./img/icons.svg#right-arrow-alt"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
+    <div class="feedback-wrapper swiper feedback-swiper">
+      <ul class="feedback-list feedback-data-container swiper-wrapper"></ul>
+      <div class="feedback-swiper-controls">
+        <div class="feedback-swiper-pagination"></div>
+        <div class="feedback-navigation-wrapper">
+          <button class="feedback-navigation-button slider-arrow feedback-swiper-button-prev" type="button">
+            <svg class="feedback-navigation-button-icon">
+              <use href="./img/icons.svg#left-arrow-alt"></use>
+            </svg>
+          </button>
+          <button class="feedback-navigation-button slider-arrow feedback-swiper-button-next" type="button">
+            <svg class="feedback-navigation-button-icon">
+              <use href="./img/icons.svg#right-arrow-alt"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
