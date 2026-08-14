@@ -3,11 +3,14 @@ import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import feedbackData from './feedback-data.js';
+import feedbackData, { feedbackEmptyData } from './feedback-data.js';
+import { setElementVisible } from './helper.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  markupFeedbackData('.feedback-data-container', feedbackData.feedbacks);
+//  markupFeedbackData('.feedback-data-container', feedbackData.feedbacks);
+  markupFeedbackData('.feedback-data-container', feedbackEmptyData.feedbacks);
   initSwiper();
+  updateVisible();
 /*
   const feedback_container = document.querySelector('.feedback-data-container');
 
@@ -69,7 +72,7 @@ function markupFeedbackData(selectorOrElement, data) {
 
   const url = `${spriteUrl}#${iconId}`;
 
-  const markup = feedbackData.feedbacks.map(({ _id, name, date, descr, rate }) => `
+  const markup = data.map(({ _id, name, date, descr, rate }) => `
     <li class="feedback-item swiper-slide" data_id="${_id}">
   <!--          
       <div class="feedback-rating rating value-3">
@@ -150,4 +153,11 @@ function initSwiper() {
       invert: false,
     }
   });
+}
+
+function updateVisible() {
+  const elem = document.querySelector('.feedback-list');
+  if (elem) {
+    setElementVisible('.feedback-swiper-controls', elem.childElementCount > 0);
+  }
 }

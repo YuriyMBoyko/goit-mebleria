@@ -75,3 +75,10 @@ export default {
   "page": "1",
   "limit": "10"
 }
+
+export const feedbackEmptyData = {
+  "feedbacks": [],
+  "total": 0,
+  "page": "1",
+  "limit": "10"
+};

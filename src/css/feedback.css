@@ -77,6 +77,10 @@
   align-items: center;
   width: 100%;
 }
+
+.feedback-swiper-controls.hidden {
+  display: none;
+}
 /*
 .feedback-swiper-pagination {
   display: flex;
