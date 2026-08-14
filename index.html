@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Меблерія</title>
     <script type="module" crossorigin src="/goit-mebleria/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-mebleria/assets/vendor-Cb7VvBBu.js">
-    <link rel="stylesheet" crossorigin href="/goit-mebleria/assets/vendor-BfPs2Zf6.css">
-    <link rel="stylesheet" crossorigin href="/goit-mebleria/assets/index-BulJlwsn.css">
+    <link rel="modulepreload" crossorigin href="/goit-mebleria/assets/vendor-oUuVXgl_.js">
+    <link rel="stylesheet" crossorigin href="/goit-mebleria/assets/vendor-CCezuzxG.css">
+    <link rel="stylesheet" crossorigin href="/goit-mebleria/assets/index-chfH5Q4S.css">
   </head>
   <body>
     <header class="header">
@@ -182,26 +182,22 @@
       <h2 class="feedback-title">Відгуки клієнтів</h2>
       <p class="feedback-title-text">Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі.</p>
     </div>
-    <div class="feedback-wrapper">
-      <ul class="feedback-list feedback-data-container"></ul>
-      <div class="wiper-controls-wrapper">
-        <div class="wiper-controls">This is just a text</div>
-        <ul class="feedback-navigation-list">
-          <li class="feedback-navigation-item">
-            <button class="feedback-navigation-button slider-arrow" type="button">
-              <svg class="feedback-navigation-button-icon" width="24" height="24">
-                <use href="/goit-mebleria/assets/icons-yBS_w1Iq.svg#left-arrow-alt"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="feedback-navigation-item">
-            <button class="feedback-navigation-button slider-arrow" type="button" disabled>
-              <svg class="feedback-navigation-button-icon" width="24" height="24">
-                <use href="/goit-mebleria/assets/icons-yBS_w1Iq.svg#right-arrow-alt"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
+    <div class="feedback-wrapper swiper feedback-swiper">
+      <ul class="feedback-list feedback-data-container swiper-wrapper"></ul>
+      <div class="feedback-swiper-controls">
+        <div class="feedback-swiper-pagination"></div>
+        <div class="feedback-navigation-wrapper">
+          <button class="feedback-navigation-button slider-arrow feedback-swiper-button-prev" type="button">
+            <svg class="feedback-navigation-button-icon">
+              <use href="/goit-mebleria/assets/icons-yBS_w1Iq.svg#left-arrow-alt"></use>
+            </svg>
+          </button>
+          <button class="feedback-navigation-button slider-arrow feedback-swiper-button-next" type="button">
+            <svg class="feedback-navigation-button-icon">
+              <use href="/goit-mebleria/assets/icons-yBS_w1Iq.svg#right-arrow-alt"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
