@@ -1,10 +1,12 @@
+import spriteUrl from '../img/star-rating.icons.svg';
+
 export function buildStarRatingMarkup(selectorOrElement, rate) {
 
   const { rateIntValue, rateIsHalf } = rateNormalize(rate);
   const halfClass = rateIsHalf ? 'half' : '';
 
-/*  const starMarkup = getStarMarkup();*/
-  const starMarkup = getStarMarkupByTemplate(selectorOrElement);
+  const starMarkup = getStarMarkup();
+/*  const starMarkup = getStarMarkupByTemplate(selectorOrElement);*/
 
   const starsMarkup = Array.from({ length: 5 }, () => { return starMarkup; }).join('');
 
@@ -19,7 +21,7 @@ export function buildStarRatingEmptyMarkup(rate) {
 }
 
 function getStarMarkup() {
-  const spriteUrl = new URL('../img/star-rating.icons.svg', import.meta.url).href;
+/*  const spriteUrl = new URL('../img/star-rating.icons.svg', import.meta.url).href;*/
 
   return `
     <div class="star">
@@ -28,7 +30,16 @@ function getStarMarkup() {
       <svg class="star-filled"><use href="${spriteUrl}#star-filled"></use></svg>
     </div>`;
 }
+/*
+export function buildStarRatingMarkupByTemplate(selectorOrElement, rate) {
 
+  const { rateIntValue, rateIsHalf } = rateNormalize(rate);
+  const halfClass = rateIsHalf ? 'half' : '';
+
+  const starsMarkup = Array.from({ length: 5 }, getStarMarkup).join('');
+
+}
+*/
 function getStarMarkupByTemplate(selectorOrElement) {
   console.log(selectorOrElement)
   if (!selectorOrElement) return '';
@@ -39,7 +50,21 @@ function getStarMarkupByTemplate(selectorOrElement) {
   console.log(template);
 
   if (template) {
-    console.log(template.contentDocument);
+/*
+    const s = template.innerHtml;
+    console.log(s);
+
+    const wrapper = document.createElement('div');
+    console.log(wrapper.outerHtml);
+
+    const clone = template.content.cloneNode(true);
+    console.log(clone.outerHtml);
+
+    wrapper.appendChild(clone);
+    console.log(wrapper);
+    console.log('wrapper innerHtml');
+    console.log(wrapper.childNodes[1].innerHtml);
+*/
     return template.innerHtml;
   }
 }

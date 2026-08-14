@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'css-star-rating/css/star-rating.css';
 import { setElementVisible } from './helper.js';
-/*import { buildStarRatingMarkup } from './feedback-star.js'*/
+import { buildStarRatingMarkup } from './feedback-star.js'
 import feedbackData, { feedbackEmptyData } from './feedback-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,7 +33,7 @@ function markupFeedbackData(selectorOrElement, data) {
   const markup = data.map(({ _id, name, date, descr, rate }) => {
     return `
       <li class="swiper-slide feedback-item" data_id="${_id}">
-        <div class="feedback-rating" data-date="${date}" data-rate="${rate}">${buildStarRatingMarkup('#star-template', rate)}</div>
+        <div class="feedback-rating" data-date="${date}" data-rate="${rate}">${buildStarRatingMarkup('#feedback-star-template', rate)}</div>
         <p class="feedback-text">${descr}</p>
         <p class="feedback-author">${name}</p>
       </li>`;
@@ -96,14 +96,14 @@ function updateVisible() {
     setElementVisible('.feedback-swiper-controls', elem.childElementCount > 0);
   }
 }
-
-function buildStarRatingMarkup(selectorOrElement, rate) {
+/*
+function buildStarRatingMarkup(rate) {
 
   const { rateIntValue, rateIsHalf } = rateNormalize(rate);
   const halfClass = rateIsHalf ? 'half' : '';
 
   const starMarkup = getStarMarkup();
-/*  const starMarkup = getStarMarkupByTemplate(selectorOrElement);*/
+  const starMarkup = getStarMarkupByTemplate(selectorOrElement);
 
   const starsMarkup = Array.from({ length: 5 }, () => { return starMarkup; }).join('');
 
@@ -137,3 +137,4 @@ function rateNormalize(value) {
     rateIsHalf: (rate % 10) >= 5
   };
 }
+*/
