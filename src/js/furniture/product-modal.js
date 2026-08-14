@@ -1,0 +1,1 @@
+import productModalData from './product-modal-data.js';

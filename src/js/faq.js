@@ -1,28 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-
-const faqData = [
-  {
-    question: 'Як здійснюється доставка меблів?',
-    answer: 'Ми доставляємо замовлення по всій Україні через надійні служби. Термін доставки зазвичай складає 3–7 днів залежно від регіону.'
-  },
-  {
-    question: 'Чи є можливість вибрати колір або матеріал?',
-    answer: 'Так, у багатьох моделях доступні варіанти оббивки та кольорів. Усі доступні опції вказані на сторінці товару.'
-  },
-  {
-    question: 'Чи можна повернути товар, якщо він не підійшов?',
-    answer: 'Так, ви можете повернути товар протягом 14 днів, якщо він не був у користуванні та збережений у первинному вигляді.'
-  },
-  {
-    question: 'Чи надаєте ви послугу збирання меблів?',
-    answer: 'Так, під час оформлення замовлення можна обрати послугу збирання. Наші майстри зберуть меблі у зручний для вас час.'
-  },
-  {
-    question: 'Як здійснити оплату?',
-    answer: 'Ми приймаємо оплату карткою онлайн, банківським переказом або післяплатою при отриманні.'
-  },
-];
+import faqData from './faq-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const ac_container = document.querySelector('.accordion-container');
@@ -32,13 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const spriteUrl = new URL('../img/icons.svg', import.meta.url).href;
   const iconId = 'chevron-down';
 
-  const markup = faqData.map(({ question, answer }) => `
+  const url = `${spriteUrl}#${iconId}`;
+
+  const markup = faqData.faq.map(({ question, answer }) => `
     <div class="ac">
       <h3 class="ac-header">
         <button class="ac-trigger" type="button">
           <span>${question}</span>
           <svg class="faq-question-arrow">
-            <use href="${spriteUrl}#${iconId}"></use>
+            <use href="${url}"></use>
           </svg>
         </button>
       </h3>
