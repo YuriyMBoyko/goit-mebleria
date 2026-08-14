@@ -1,4 +1,3 @@
-const STAR_SPRITE = `../img/star-rating.icons.svg`;
 /*
 export function buildStarRatingMarkup(rate) {
   return '';
@@ -17,12 +16,13 @@ export function buildStarRatingMarkup(rate) {
 }
 
 function getStarMarkup() {
-  const s = STAR_SPRITE;
+  const spriteUrl = new URL('../img/star-rating.icons.svg', import.meta.url).href;
+
   return `
     <div class="star">
-      <svg class="star-empty"><use href="${s}#star-empty"></use></svg>
-      <svg class="star-half"><use href="${s}#star-half"></use></svg>
-      <svg class="star-filled"><use href="${s}#star-filled"></use></svg>
+      <svg class="star-empty"><use href="${spriteUrl}#star-empty"></use></svg>
+      <svg class="star-half"><use href="${spriteUrl}#star-half"></use></svg>
+      <svg class="star-filled"><use href="${spriteUrl}#star-filled"></use></svg>
     </div>`;
 }
 
