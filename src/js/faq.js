@@ -1,6 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import spriteUrl from '../img/icons.svg';
+import faqIconsUrl from '../img/icons.svg';
 import faqData from './faq-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*  const spriteUrl = new URL('../img/icons.svg', import.meta.url).href;*/
   const iconId = 'chevron-down';
 
-  const url = `${spriteUrl}#${iconId}`;
+  const url = `${faqIconsUrl}#${iconId}`;
 
   const markup = faqData.faq.map(({ question, answer }) => `
     <div class="ac">
