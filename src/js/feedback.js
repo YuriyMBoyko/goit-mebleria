@@ -25,16 +25,16 @@ function markupFeedbackData(selectorOrElement, data) {
   const feedback_container = isString ? document.querySelector(selectorOrElement) : selectorOrElement;
 
   if (!feedback_container) return;
-
+/*
   const spriteUrl = new URL('../img/icons.svg', import.meta.url).href;
   const iconId = 'star';
 
   const url = `${spriteUrl}#${iconId}`;
-
+*/
   const markup = data.map(({ _id, name, date, descr, rate }) => {
     return `
       <li class="swiper-slide feedback-item" data_id="${_id}">
-        <div class="feedback-rating" data-date="${date}" data-rate="${rate}">${buildStarRatingMarkup('#feedback-star-template', rate)}</div>
+        <div class="feedback-rating" data-date="${date}" data-rate="${rate}">${buildStarRatingMarkup(rate)}</div>
         <p class="feedback-text">${descr}</p>
         <p class="feedback-author">${name}</p>
       </li>`;
@@ -144,13 +144,12 @@ function rateNormalize(value) {
 
 
 
-export function buildStarRatingMarkup(selectorOrElement, rate) {
+export function buildStarRatingMarkup(rate) {
 
   const { rateIntValue, rateIsHalf } = rateNormalize(rate);
   const halfClass = rateIsHalf ? 'half' : '';
 
   const starMarkup = getStarMarkup();
-/*  const starMarkup = getStarMarkupByTemplate(selectorOrElement);*/
 
   const starsMarkup = Array.from({ length: 5 }, () => { return starMarkup; }).join('');
 
