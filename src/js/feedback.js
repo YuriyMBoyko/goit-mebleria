@@ -7,7 +7,7 @@ import 'css-star-rating/css/star-rating.css';
 import { setElementVisible } from './helper.js';
 /*import { buildStarRatingMarkup } from './feedback-star.js'*/
 import feedbackData, { feedbackEmptyData } from './feedback-data.js';
-import spriteUrl from '../img/star-rating.icons.svg';
+import feedbackIconsUrl from '../img/star-rating.icons.svg';
 
 document.addEventListener('DOMContentLoaded', () => {
   markupFeedbackData('.feedback-data-container', feedbackData.feedbacks);
@@ -168,9 +168,9 @@ function getStarMarkup() {
 
   return `
     <div class="star">
-      <svg class="star-empty"><use href="${spriteUrl}#star-empty"></use></svg>
-      <svg class="star-half"><use href="${spriteUrl}#star-half"></use></svg>
-      <svg class="star-filled"><use href="${spriteUrl}#star-filled"></use></svg>
+      <svg class="star-empty"><use href="${feedbackIconsUrl}#star-empty"></use></svg>
+      <svg class="star-half"><use href="${feedbackIconsUrl}#star-half"></use></svg>
+      <svg class="star-filled"><use href="${feedbackIconsUrl}#star-filled"></use></svg>
     </div>`;
 }
 

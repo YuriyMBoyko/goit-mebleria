@@ -1,4 +1,4 @@
-import spriteUrl from '../img/star-rating.icons.svg';
+import feedbackStarIconsUrl from '../img/star-rating.icons.svg';
 
 export function buildStarRatingMarkup(selectorOrElement, rate) {
 
@@ -25,9 +25,9 @@ function getStarMarkup() {
 
   return `
     <div class="star">
-      <svg class="star-empty"><use href="${spriteUrl}#star-empty"></use></svg>
-      <svg class="star-half"><use href="${spriteUrl}#star-half"></use></svg>
-      <svg class="star-filled"><use href="${spriteUrl}#star-filled"></use></svg>
+      <svg class="star-empty"><use href="${feedbackStarIconsUrl}#star-empty"></use></svg>
+      <svg class="star-half"><use href="${feedbackStarIconsUrl}#star-half"></use></svg>
+      <svg class="star-filled"><use href="${feedbackStarIconsUrl}#star-filled"></use></svg>
     </div>`;
 }
 /*
